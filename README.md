@@ -1,33 +1,52 @@
-# Capital Office
+# Capital Office — 3D Finance Tycoon
 
-**Capital Office** — 3D finance tycoon PWA built for the browser and mobile devices.
+PWA-игра о развитии инвестиционной фирмы. Текущая production-версия строится по фазам, чтобы новые системы не превращали проект в монолитный набор случайных побочных эффектов.
 
-## Gameplay
+## Roadmap
 
-- walk through a stylised high-rise investment office in real-time 3D;
-- manage a portfolio from the MARKET terminal;
-- buy hedges at the RISK desk;
-- invest in research to improve the firm's edge;
-- hire analysts from the TEAM terminal;
-- survive random market shocks and complete eight quarters;
-- start with $100,000 and attempt to reach $1,000,000;
-- progress is saved locally in the browser.
+### Phase 1 — 3D Foundation & Controls
+- человекоподобный procedural character вместо capsule-avatar;
+- idle/walk animation;
+- свободная third-person orbit camera;
+- camera-relative movement;
+- mouse drag + wheel zoom;
+- mobile camera look zone + joystick;
+- portrait + landscape layouts;
+- iPhone safe-area support;
+- adaptive render quality;
+- улучшенные PBR-like материалы, освещение, skyline и офис.
 
-## Controls
+### Phase 2 — Market & Portfolio
+- игровые активы, котировки и портфель;
+- buy/sell, cash, allocation, P&L;
+- market regimes, новости и correlation logic;
+- риск-метрики и графики в терминале.
 
-Desktop: WASD / arrow keys to move, `E` to interact.
-Mobile: virtual joystick and interaction button.
+### Phase 3 — Tycoon
+- сотрудники, роли, зарплаты;
+- клиенты, AUM, fees, withdrawals;
+- reputation, конкуренты;
+- физическое развитие офиса и отделов.
 
-## PWA
+### Phase 4 — Advanced Fund Systems
+- leverage, short positions, hedging depth;
+- compliance incidents;
+- crisis scenarios;
+- achievements и challenge rules.
 
-The game includes a web manifest, service worker and offline caching. Three.js is cached after the first successful load.
+### Phase 5 — World & Career
+- career progression;
+- apartment / city spaces;
+- first-person mode;
+- day/night ambience;
+- leaderboard-ready score model и daily challenge seed.
 
-## Build
+## Управление
 
-```bash
-npm run build
-```
+Desktop: WASD / стрелки, drag мышью для свободного обзора, колесо для zoom, E для взаимодействия.
 
-The static production output is written to `dist/` and can be deployed to Vercel.
+Mobile: левый виртуальный стик для движения, drag по правой части экрана для камеры, кнопка E для взаимодействия. Интерфейс адаптируется под portrait и landscape.
 
-This project is a game and does not provide investment advice or forecasts.
+## Disclaimer
+
+Это игровая модель и не инвестиционная рекомендация.
