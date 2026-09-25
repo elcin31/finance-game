@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Capital Run" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Capital Run</title>
+</head>
+<body>
+  <main class="app-shell">
+    <section id="menu" class="screen menu-screen">
+      <div class="grid-bg"></div>
+      <div class="brand-wrap">
+        <div class="eyebrow">FINANCE SURVIVAL</div>
+        <h1><span>CAPITAL</span><strong>RUN</strong></h1>
+        <p class="lead">Переживи рыночные циклы, собери диверсифицированный портфель и не отдай капитал волатильности.</p>
+      </div>
+
+      <div class="menu-actions">
+        <button id="continueBtn" class="btn btn-primary">НОВАЯ ИГРА</button>
+        <button id="newBtn" class="btn btn-secondary">НАЧАТЬ ЗАНОВО</button>
+      </div>
+
+      <div class="how-card">
+        <div class="how-title">КАК ИГРАТЬ</div>
+        <div class="how-row"><span class="dot tech"></span><p><b>Технологии</b> дают высокий прирост капитала.</p></div>
+        <div class="how-row"><span class="dot bond"></span><p><b>Облигации</b> добавляют защиту от шоков.</p></div>
+        <div class="how-row"><span class="dot health"></span><p><b>Защитный сектор</b> помогает диверсификации.</p></div>
+        <div class="how-row"><span class="dot shock"></span><p><b>Рыночные шоки</b> преследуют тебя и режут капитал.</p></div>
+      </div>
+
+      <p class="fine-print">WASD / стрелки на компьютере. Экранный D-pad на телефоне. Не инвестиционная рекомендация, а игра. Мир ещё не настолько сломан.</p>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden" aria-label="Capital Run">
+      <header class="hud">
+        <div>
+          <div id="yearLabel" class="hud-small">ГОД 1 / 5</div>
+          <div id="capitalLabel" class="capital">$100,000</div>
+        </div>
+        <div class="hud-right">
+          <div id="timerLabel" class="timer">40s</div>
+          <button id="pauseBtn" class="icon-btn" aria-label="Пауза">Ⅱ</button>
+        </div>
+      </header>
+
+      <div class="subhud">
+        <span id="diversifyLabel">Диверсификация: 0/3 · x1.00</span>
+        <span id="shieldLabel">Защита 0%</span>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="390" height="548"></canvas>
+        <div id="banner" class="banner hidden"></div>
+      </div>
+
+      <div id="mobileControls" class="controls" aria-label="Экранное управление">
+        <button data-key="up" class="dpad up">↑</button>
+        <button data-key="left" class="dpad left">←</button>
+        <button data-key="down" class="dpad down">↓</button>
+        <button data-key="right" class="dpad right">→</button>
+      </div>
+
+      <div class="legend">
+        <span><i class="dot tech"></i>Tech</span>
+        <span><i class="dot bond"></i>Bonds</span>
+        <span><i class="dot health"></i>Defensive</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div id="modalEyebrow" class="eyebrow">ГОД ЗАКРЫТ</div>
+      <h2 id="modalTitle">Выбери улучшение</h2>
+      <p id="modalMeta" class="modal-meta"></p>
+      <div id="upgradeList" class="upgrade-list"></div>
+      <button id="menuBtn" class="btn btn-secondary hidden">В ГЛАВНОЕ МЕНЮ</button>
+    </div>
+  </div>
+
+  <script type="module" src="/game.js"></script>
+</body>
+</html>

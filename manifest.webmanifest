@@ -1,0 +1,15 @@
+{
+  "name": "Capital Run — финансовая 2D игра",
+  "short_name": "Capital Run",
+  "description": "Переживай рыночные циклы, собирай капитал и управляй риском.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/maskable-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

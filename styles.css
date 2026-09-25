@@ -1,0 +1,66 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  color: #f5f8ff;
+  background: #050b14;
+  font-synthesis: none;
+  --green: #5ef2a4;
+  --blue: #50a7ff;
+  --gold: #ffc857;
+  --purple: #b887ff;
+  --red: #ff6170;
+  --panel: #0c1928;
+  --muted: #8ca4c2;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; width: 100%; min-height: 100%; background: #050b14; overscroll-behavior: none; }
+body { min-height: 100dvh; overflow: hidden; touch-action: none; }
+button { font: inherit; }
+.app-shell { width: min(100vw, 430px); height: 100dvh; min-height: 620px; margin: 0 auto; position: relative; background: #07111f; overflow: hidden; box-shadow: 0 0 80px rgba(0,0,0,.55); }
+.screen { position: absolute; inset: 0; }
+.hidden { display: none !important; }
+.menu-screen { padding: max(30px, env(safe-area-inset-top)) 24px max(18px, env(safe-area-inset-bottom)); overflow-y: auto; background: radial-gradient(circle at 80% 10%, rgba(94,242,164,.09), transparent 30%), #07111f; }
+.grid-bg { position: fixed; inset: 0; opacity: .14; pointer-events: none; background-image: linear-gradient(#25445e 1px, transparent 1px), linear-gradient(90deg,#25445e 1px,transparent 1px); background-size: 30px 30px; mask-image: linear-gradient(to bottom, #000, transparent 72%); }
+.brand-wrap, .menu-actions, .how-card, .fine-print { position: relative; z-index: 1; }
+.eyebrow { color: #6e88a8; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+h1 { margin: 18px 0 12px; font-size: clamp(48px, 15vw, 66px); line-height: .84; letter-spacing: -.055em; }
+h1 span, h1 strong { display:block; } h1 strong { color: var(--green); letter-spacing: .01em; }
+.lead { color: #a9bdd5; line-height: 1.48; margin: 22px 0 0; font-size: 15px; max-width: 360px; }
+.menu-actions { display:grid; gap: 10px; margin-top: 34px; }
+.btn { width: 100%; border: 0; border-radius: 16px; min-height: 58px; font-weight: 900; letter-spacing: .035em; cursor:pointer; }
+.btn-primary { background: var(--green); color: #052016; box-shadow: 0 12px 35px rgba(94,242,164,.14); }
+.btn-secondary { background: #122337; color: #e8f1fb; border: 1px solid #24415e; }
+.btn:active { transform: scale(.985); }
+.how-card { margin-top: 26px; padding: 18px; background: rgba(12,25,40,.78); border: 1px solid #1c3854; border-radius: 20px; backdrop-filter: blur(10px); }
+.how-title { color: #617d9c; font-size: 10px; letter-spacing: .14em; font-weight: 800; margin-bottom: 10px; }
+.how-row { display:flex; gap: 10px; align-items:center; min-height: 38px; }
+.how-row p { margin:0; color:#9fb4cc; font-size:12px; line-height:1.35; } .how-row b { color:#e9f2fc; }
+.dot { width: 13px; height: 13px; display:inline-block; border-radius:50%; flex: 0 0 13px; }
+.dot.tech { background: var(--blue); } .dot.bond { background: var(--gold); } .dot.health { background: var(--purple); } .dot.shock { background: var(--red); border-radius:4px; transform:rotate(45deg); }
+.fine-print { color:#536b86; font-size:10px; line-height:1.45; margin:18px 2px 6px; }
+.game-screen { padding-top: max(12px, env(safe-area-inset-top)); background: #07111f; }
+.hud { height: 64px; padding: 0 18px; display:flex; justify-content:space-between; align-items:flex-start; }
+.hud-small { color:#708aa8; font-size:11px; font-weight:700; letter-spacing:.08em; margin-top:2px; }
+.capital { margin-top:4px; font-weight:900; font-size:24px; letter-spacing:-.04em; }
+.hud-right { display:flex; gap:12px; align-items:center; }
+.timer { color:var(--green); font-size:20px; font-weight:900; }
+.icon-btn { width:38px; height:38px; border-radius:12px; border:1px solid #294762; background:#102239; color:#dbe8f8; font-weight:900; }
+.subhud { display:flex; justify-content:space-between; padding: 0 18px 9px; color:#8098b3; font-size:10px; }
+.canvas-wrap { position:relative; margin: 0 12px; height: min(64vh, 548px); max-height:548px; border:1px solid #23445f; border-radius:22px; overflow:hidden; background:#091827; }
+canvas { width:100%; height:100%; display:block; }
+.banner { position:absolute; left:50%; top:46%; transform:translate(-50%,-50%); padding:10px 16px; border-radius:13px; background:rgba(5,12,20,.9); border:1px solid #26455e; font-weight:900; letter-spacing:.03em; white-space:nowrap; }
+.controls { position:absolute; left: 14px; bottom: max(28px, calc(env(safe-area-inset-bottom) + 10px)); width: 154px; height: 118px; z-index:5; }
+.dpad { position:absolute; width:50px; height:50px; border-radius:18px; border:1px solid rgba(132,162,195,.4); background:rgba(14,34,54,.86); color:#e4effb; font-size:22px; font-weight:900; backdrop-filter:blur(8px); }
+.dpad:active, .dpad.active { background:rgba(39,78,111,.95); }
+.dpad.up { left:52px; top:0; } .dpad.down { left:52px; top:66px; } .dpad.left { left:0; top:33px; } .dpad.right { right:0; top:33px; }
+.legend { position:absolute; right:18px; bottom:max(30px, calc(env(safe-area-inset-bottom) + 12px)); display:grid; gap:7px; font-size:9px; color:#6d86a4; }
+.legend span { display:flex; align-items:center; gap:6px; } .legend .dot { width:8px; height:8px; flex-basis:8px; }
+.modal { position:fixed; inset:0; z-index:50; display:grid; place-items:center; background:rgba(2,7,13,.84); backdrop-filter:blur(10px); padding:20px; }
+.modal-card { width:min(100%, 360px); border:1px solid #294865; background:#0b1827; border-radius:24px; padding:22px; box-shadow:0 30px 80px rgba(0,0,0,.45); }
+.modal-card h2 { margin:8px 0 5px; font-size:26px; letter-spacing:-.04em; } .modal-meta { color:#8ea6c1; margin:0 0 18px; font-size:13px; }
+.upgrade-list { display:grid; gap:10px; }
+.upgrade { text-align:left; width:100%; min-height:72px; border-radius:16px; border:1px solid #2a4965; background:#12263a; color:#eff6ff; padding:12px 14px; }
+.upgrade strong { display:block; font-size:12px; letter-spacing:.045em; } .upgrade span { display:block; color:#8ea6c1; font-size:11px; margin-top:7px; }
+.upgrade:active { transform:scale(.985); border-color:var(--green); }
+#menuBtn { margin-top:12px; }
+@media (pointer:fine) { .controls { opacity:.55; } }
+@media (max-height:700px) { .canvas-wrap { height: 430px; } .controls { bottom:10px; transform:scale(.86); transform-origin:left bottom; } .legend { bottom:18px; } }
