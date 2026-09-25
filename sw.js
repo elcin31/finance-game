@@ -1,4 +1,4 @@
-const CACHE='capital-office-3d-v7-phase5';
+const CACHE='capital-office-3d-v8-startup-fix';
 const LOCAL=['/','/index.html','/styles.css','/game.js','/market.js','/portfolio.js','/tycoon.js','/advanced.js','/world.js','/manifest.webmanifest','/icon.svg','/maskable-icon.svg'];
 const THREE='https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js';
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(async cache=>{await cache.addAll(LOCAL);try{await cache.add(THREE)}catch{}}).then(()=>self.skipWaiting()))});
