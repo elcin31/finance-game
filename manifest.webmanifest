@@ -1,15 +1,15 @@
 {
-  "name": "Capital Run — финансовая 2D игра",
-  "short_name": "Capital Run",
-  "description": "Переживай рыночные циклы, собирай капитал и управляй риском.",
+  "name": "Capital Office — 3D Finance Tycoon",
+  "short_name": "Capital Office",
+  "description": "3D finance tycoon PWA: управляй инвестиционной фирмой и переживи рыночные циклы.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "background_color": "#07111f",
+  "orientation": "any",
+  "background_color": "#030710",
   "theme_color": "#07111f",
   "icons": [
-    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "/maskable-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    {"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"},
+    {"src":"/maskable-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"maskable"}
   ]
 }
