@@ -19,7 +19,7 @@
 
     <section id="startScreen" class="overlay start-screen">
       <div class="glass hero-card">
-        <p class="kicker">3D FINANCE TYCOON</p>
+        <div class="hero-topline"><p class="kicker">3D FINANCE TYCOON · PHASE 1</p><span class="version-chip">VISUAL UPGRADE</span></div>
         <h1>CAPITAL <span>OFFICE</span></h1>
         <p class="lead">Построй инвестиционную фирму, управляй риском и переживи 8 кварталов рынка.</p>
         <div class="goal-row">
@@ -29,23 +29,26 @@
         </div>
         <button id="startBtn" class="primary">НАЧАТЬ ИГРУ</button>
         <button id="continueBtn" class="secondary hidden">ПРОДОЛЖИТЬ</button>
-        <p class="controls-copy">WASD / стрелки · E для взаимодействия · на телефоне есть виртуальный стик.</p>
+        <p class="controls-copy desktop-copy">WASD / стрелки — движение · drag мышью — осмотр · колесо — zoom · E — взаимодействие.</p>
+        <p class="controls-copy mobile-copy">Левый стик — движение · проведи пальцем по правой части экрана — осмотр · E — взаимодействие.</p>
       </div>
     </section>
 
     <header id="hud" class="hud hidden">
-      <div class="hud-group">
+      <div class="hud-group primary-hud">
         <div class="hud-pill"><small>КАПИТАЛ</small><strong id="capitalValue">$100,000</strong></div>
         <div class="hud-pill"><small>КВАРТАЛ</small><strong id="quarterValue">1 / 8</strong></div>
       </div>
-      <div class="hud-group right">
+      <div class="hud-group right secondary-hud">
         <div class="hud-pill compact"><small>СТРАТЕГИЯ</small><strong id="strategyValue">Balanced</strong></div>
+        <div class="hud-pill compact quality"><small>ГРАФИКА</small><strong id="qualityValue">AUTO</strong></div>
         <button id="pauseBtn" class="icon-btn" aria-label="Пауза">Ⅱ</button>
       </div>
     </header>
 
     <div id="eventTicker" class="ticker hidden"><span id="eventText">Рынок спокоен</span></div>
     <div id="interactionHint" class="interaction-hint hidden">E · Взаимодействовать</div>
+    <div id="cameraHint" class="camera-hint hidden">Осмотр камеры работает независимо от движения</div>
 
     <div id="joystick" class="joystick hidden" aria-label="Виртуальный стик">
       <div class="stick-base"><div id="stickKnob" class="stick-knob"></div></div>
@@ -54,7 +57,7 @@
 
     <section id="panel" class="panel hidden" aria-live="polite">
       <div class="panel-card glass">
-        <button id="closePanel" class="panel-close">×</button>
+        <button id="closePanel" class="panel-close" aria-label="Закрыть">×</button>
         <p id="panelKicker" class="kicker">TERMINAL</p>
         <h2 id="panelTitle">Рынок</h2>
         <div id="panelBody"></div>
