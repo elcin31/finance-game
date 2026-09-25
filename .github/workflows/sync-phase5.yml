@@ -1,0 +1,31 @@
+name: Sync Phase 5 sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.phase5/**'
+      - '.github/workflows/sync-phase5.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore Phase 5 source tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .phase5/chunk-* | base64 -d > /tmp/phase5.tar.xz
+          tar -xJf /tmp/phase5.tar.xz -C .
+          rm -rf .phase5
+          rm -f .github/workflows/sync-phase5.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Phase 2-5: market, tycoon, advanced systems and world"
+          git push
