@@ -1,31 +1,33 @@
-# Capital Run
+# Capital Office
 
-Мобильная 2D PWA-игра о рыночных циклах, диверсификации и риске.
+**Capital Office** — 3D finance tycoon PWA built for the browser and mobile devices.
 
-## Что уже есть
+## Gameplay
 
-- 5 игровых рыночных лет
-- три класса активов: Tech, Bonds и Defensive
-- диверсификационный множитель
-- рыночные шоки, которые преследуют игрока
-- защита капитала через облигации
-- улучшения между годами: хеджирование, ликвидность и исследования
-- локальное сохранение прогресса
-- управление WASD/стрелками и touch D-pad
-- офлайн-режим через Service Worker
-- installable PWA manifest
-- адаптация под мобильный portrait UI
+- walk through a stylised high-rise investment office in real-time 3D;
+- manage a portfolio from the MARKET terminal;
+- buy hedges at the RISK desk;
+- invest in research to improve the firm's edge;
+- hire analysts from the TEAM terminal;
+- survive random market shocks and complete eight quarters;
+- start with $100,000 and attempt to reach $1,000,000;
+- progress is saved locally in the browser.
 
-## Локальный запуск
+## Controls
 
-```bash
-npm run dev
-```
+Desktop: WASD / arrow keys to move, `E` to interact.
+Mobile: virtual joystick and interaction button.
 
-## Production build
+## PWA
+
+The game includes a web manifest, service worker and offline caching. Three.js is cached after the first successful load.
+
+## Build
 
 ```bash
 npm run build
 ```
 
-Результат сборки появится в `dist/`.
+The static production output is written to `dist/` and can be deployed to Vercel.
+
+This project is a game and does not provide investment advice or forecasts.
